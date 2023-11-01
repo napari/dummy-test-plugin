@@ -99,3 +99,7 @@ tramp
 .dir-locals.el
 
 github_cache.sqlite
+
+# version
+
+dummy_test_plugin/_version.py
