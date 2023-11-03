@@ -49,12 +49,6 @@ def napari_experimental_provide_dock_widget():
     return threshold
 
 
-### THEME ###
-@napari_hook_implementation
-def napari_experimental_provide_theme():
-    return get_new_theme()
-
-
 ### HELPERS ###
 def reader_function(path: str):
     data = np.load(path)
@@ -82,25 +76,4 @@ def threshold(
     data: 'napari.types.ImageData', threshold: int
 ) -> 'napari.types.LabelsData':
     return (data > threshold).astype(int)
-
-
-def get_new_theme():
-    themes = {
-        "super_dark": {
-            "name": "super_dark",
-            "background": "rgb(12, 12, 12)",
-            "foreground": "rgb(65, 72, 81)",
-            "primary": "rgb(90, 98, 108)",
-            "secondary": "rgb(134, 142, 147)",
-            "highlight": "rgb(106, 115, 128)",
-            "text": "rgb(240, 241, 242)",
-            "icon": "rgb(209, 210, 212)",
-            "warning": "rgb(153, 18, 31)",
-            "current": "rgb(0, 122, 204)",
-            "syntax_style": "native",
-            "console": "rgb(0, 0, 0)",
-            "canvas": "black",
-        }
-    }
-    return themes
 
