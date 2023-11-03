@@ -17,10 +17,6 @@ def napari_provide_sample_data():
     return {
         'random data': generate_random_data,
         'random image': 'https://picsum.photos/1024',
-        'sample_key': {
-            'display_name': 'Some Random Data (512 x 512)',
-            'data': generate_random_data,
-        }
     }
 
 
