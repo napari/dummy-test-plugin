@@ -2,9 +2,6 @@ name: release
 
 on: 
   push:
-    branches:
-      - npe1
-      - main
     tags:
       - "v*" # Push events to matching v*, i.e. v1.0, v20.15.10
   workflow_dispatch:
@@ -12,7 +9,6 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
-    if: contains(github.ref, 'tags')
     permissions:
       id-token: write
     steps:
